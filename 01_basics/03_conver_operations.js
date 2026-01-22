@@ -23,3 +23,21 @@ let num=44
 let str=String(num)
 console.log(str)
 console.log(typeof  str)
+
+
+//---------------------------->operations<----------------------------------
+
+console.log(3+"3"+6)  //"33"
+console.log(3+5+"8")
+console.log(+true)// 1
+console.log(+"")// 0
+
+let a=5
+let b=++a
+console.log(a)//6
+console.log(b)//6
+
+let c=5
+let d=c++
+console.log(c)//6
+console.log(d)//5
