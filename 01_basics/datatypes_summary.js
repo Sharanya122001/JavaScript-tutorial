@@ -41,3 +41,29 @@ If the value is a native or host object that implements [[Call]], the result of 
 If the value is a host object that does not implement [[Call]], the result is implementation-defined, but it will not be "undefined", "boolean", "number", or "string".
 
 */
+
+
+
+
+//*************************************stack and heap********************** */
+// stack in JS stores primitive data types
+// heap in JS stores non-primitive data types(references)
+
+
+let myytubechannel="sharanya" //stored in stack
+let anothername=myytubechannel //copy of value is stored in anothername
+anothername="codewithsharanya"
+
+console.log(myytubechannel) //sharanya
+console.log(anothername) //codewithsharanya
+//both are independent
+
+let user1={
+    name:"sharanya",
+    age:22
+} //stored in heap  
+let user2=user1 //copy of reference is stored in user2
+user2.name="codewithsharanya"
+console.log(user1.name) //codewithsharanya
+console.log(user2.name) //codewithsharanya
+//both are dependent as both are referring to the same object in heap
