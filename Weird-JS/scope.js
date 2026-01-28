@@ -48,3 +48,10 @@ a1();
     and finds the `my` variable with the value 10. Therefore, it logs 10 to the console.
     This example illustrates how nested functions can access variables from their parent function's scope.
 */
+
+/* ES6: Block Scope with let and const
+        which lets you define variables with block scope 
+        ES6 is ECMAScript 6
+        */
+
+console.log("hieee!")
