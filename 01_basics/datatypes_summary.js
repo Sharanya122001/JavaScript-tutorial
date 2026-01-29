@@ -6,7 +6,7 @@
 
 //Reference(non-primitive)
 
-// array, objects, functions
+// array, objects, functions,dates
 
 
 /*
@@ -46,7 +46,7 @@ If the value is a host object that does not implement [[Call]], the result is im
 
 
 //*************************************stack and heap********************** */
-// stack in JS stores primitive data types
+// stack in JS stores primitive data types(value)
 // heap in JS stores non-primitive data types(references)
 
 
