@@ -43,3 +43,7 @@ const a=(b,c)=>{
 const b=(y,m)=> y+m
 // we can add the () for the y+m 
 //const b=(y,m)=>(y+m) ........ this is implicit
+
+
+// if we want to give output as the object then 
+//const b=(y,m)=> ({usernmae:"sharanya"})
