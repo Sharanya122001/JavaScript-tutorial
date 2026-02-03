@@ -22,10 +22,14 @@ map.set('Fr',"France")
 //console.log(map)
 
 for(const key of map){
+    //console.log(key)
+}
+
+for(const key in map){
     console.log(key)
 }
 for(const [key,value] of map){// if we put the []for key and the vlaue then its array destructing 
-    console.log(key, ":--", value)
+    //console.log(key, ":--", value)
 }
 
 
@@ -34,7 +38,7 @@ const myo={
     'g2':'spiderman'
 }
 
-for(const key of myo){
-    console.log(key)
-}// from this wecan say that objects are iterable and maps are iterable
+// for(const key of myo){
+//     //console.log(key)
+// }// from this wecan say that objects are iterable and maps are iterable
 
