@@ -13,3 +13,7 @@ code.forEach((item, index,array)=>
 {
     console.log(item,index,array)
 })
+
+const mynum=[1,2,3,4,5]
+const newnum=mynum.filter((num)=>num>4)
+console.log(newnum)
