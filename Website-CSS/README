@@ -1,0 +1,448 @@
+CSS = Cascading Style Sheets
+CSS = appearance
+
+It answers:
+How things look
+Where things sit
+How they change visually
+
+<p>hello</p>
+p{
+    color:red;
+    font-size:20px;
+}
+
+CSS Syntax:
+selector { 
+  property: value;
+}
+selector is any paragraph or header
+
+common selector:
+p          /* tag */
+.myClass   /* class */
+#myId      /* id */
+div p      /* child */
+👉 JS uses the same selectors
+document.querySelector(".myClass")
+
+
+1️⃣ Universal Selector
+
+HTML
+<p>Hello</p>
+<div>World</div>
+
+CSS
+* {
+  margin: 0;
+  padding: 0;
+}
+📌 Selects everything
+
+
+2️⃣ Element (Tag) Selector
+
+HTML
+<p>This is a paragraph</p>
+<p>Another paragraph</p>
+
+CSS
+p {
+  color: blue;
+}
+📌 Selects all <p> elements
+
+
+3️⃣ Class Selector (.myClass)
+HTML
+<div class="myClass">Box 1</div>
+<div class="myClass">Box 2</div>
+
+CSS
+.myClass {
+  background-color: lightgray;
+  padding: 10px;
+}
+📌 Reusable (MOST used with JS)
+
+
+4️⃣ ID Selector (#myId)
+HTML
+<h1 id="myId">Main Heading</h1>
+
+CSS
+#myId {
+  color: darkred;
+}
+📌 Unique element (only ONE per page)
+
+
+note:Multiple classes are space-separated
+5️⃣ Multiple Classes (VIP Example)
+
+HTML
+<p class="user VIP">Premium User</p>
+<p class="user">Normal User</p>
+
+CSS
+.user {
+  font-size: 16px;
+}
+
+.VIP {
+  color: gold;
+  font-weight: bold;
+}
+📌 VIP gets extra styling
+
+
+6️⃣ Element + Class Selector
+
+HTML
+<p class="VIP">VIP Paragraph</p>
+<div class="VIP">VIP Div</div>
+
+CSS
+p.VIP {
+  color: purple;
+}
+📌 Selects only <p> with class VIP
+
+
+7️⃣ Descendant Selector (Parent Child)
+
+HTML
+<div class="container">
+  <p>Inside container</p>
+</div>
+
+<p>Outside container</p>
+
+CSS
+.container p {
+  color: green;
+}
+📌 Selects <p> inside .container
+
+
+1️⃣ Direct Child Selector (>)
+Meaning:
+👉 “Select ONLY immediate children, not nested ones”
+8️⃣ Direct Child Selector (>)
+HTML
+<div class="box">
+  <p>Direct child</p>
+  <div>
+    <p>Nested child</p>
+  </div>
+</div>
+
+CSS
+.box > p {
+  color: red;
+}
+📌 Only direct children
+
+
+9️⃣ Attribute Selector
+
+HTML
+<input type="text">
+<input type="password">
+
+CSS
+input[type="password"] {
+  border: 2px solid red;
+}
+📌 Very useful for forms
+
+
+🔟 Group Selector (Multiple)
+
+HTML
+<h1>Title</h1>
+<h2>Subtitle</h2>
+<p>Text</p>
+
+CSS
+h1, h2, p {
+  font-family: Arial;
+}
+📌 Apply same style to many
+
+
+1️⃣1️⃣ Pseudo-class Selector
+
+HTML
+<button>Hover me</button>
+
+CSS
+button:hover {
+  background-color: black;
+  color: white;
+}
+📌 Interaction based styling
+
+1️⃣2️⃣ Pseudo-element Selector
+
+HTML
+<p>Hello World</p>
+
+CSS
+p::first-letter {
+  font-size: 30px;
+}
+📌 Styles part of an element
+
+
+🔑 Selector Priority (VERY IMPORTANT)
+*        /* lowest */
+p
+.myClass
+#myId    /* highest */
+
+
+🤔 Why is it called pseudo?
+Pseudo means:
+not real, not actually there, but behaves like it is
+In CSS, pseudo-classes and pseudo-elements are called “pseudo” because:
+👉 They are NOT real elements or classes in HTML
+👉 CSS pretends they exist, based on a condition or position
+
+🧩 Pseudo-ELEMENTS ( :: )
+They behave like fake elements
+::before
+::after
+::first-letter
+::first-line
+
+🧠 Pseudo-CLASSES ( : )
+
+They behave like fake states or conditions
+Examples:
+:hover
+:focus
+:active
+:first-child
+
+Example
+button:hover {
+  background: black;
+}
+There is no class called hover in HTML.
+
+CSS is saying:
+“IF the user is hovering, treat it like a class”
+So it’s a pseudo-class.
+
+🎭 Why not just call them classes or elements?
+
+Because:
+You didn’t write them in HTML
+You didn’t add them manually
+They appear only under certain conditions
+
+So CSS says:
+“They’re like classes/elements… but not real ones”
+→ pseudo
+
+
+Class vs ID
+/* Class */
+.box {
+  background: yellow;
+}
+
+/* ID */
+#header {
+  height: 60px;
+}
+
+Color:
+color: red;
+color: #ff0000;
+color: rgb(255,0,0);
+255 is the intensity of that color
+
+Text
+font-size: 16px;
+font-weight: bold;
+text-align: center;
+text-transform: uppercase;
+
+box model:
+margin--outermost
+border
+padding
+content--- innermost
+
+div {
+  width: 200px;
+  padding: 10px;
+  border: 2px solid black;
+  margin: 20px;
+}
+
+
+
+⚠️ display: none vs visibility: hidden
+visibility: hidden;
+❌ Not visible
+✅ Still takes space
+
+While:
+display: none;
+❌ Not visible
+❌ Takes NO space
+
+
+1️⃣ display: block
+Meaning (plain English)
+“Take the full width and start on a new line”
+
+Examples of block elements
+div
+p
+h1–h6
+section
+
+Example
+<div class="box">Box</div>
+
+.box {
+  display: block;
+  width: 200px;
+  height: 100px;
+  background: red;
+}
+
+What happens?
+Starts on a new line
+Takes full width of parent
+Width & height ✅ allowed
+📌 Even if content is small, it occupies the whole row.
+
+
+2️⃣ display: inline
+Meaning
+“Stay in the same line like text”
+
+Examples of inline elements
+span
+a
+strong
+
+Example
+<span class="text">Hello</span>
+<span class="text">World</span>
+
+.text {
+  display: inline;
+  width: 200px;
+  height: 100px;
+  background: yellow;
+}
+
+What happens?
+❌ Width ignored
+❌ Height ignored
+✅ Stays in same line
+
+Background applies only around text
+📌 Inline elements are text-like
+
+
+3️⃣ display: inline-block (MOST IMPORTANT)
+Meaning
+“Behave like text BUT allow box styling”
+This is a mix of block + inline
+
+Example
+<div class="card">Card 1</div>
+<div class="card">Card 2</div>
+
+.card {
+  display: inline-block;
+  width: 150px;
+  height: 100px;
+  background: lightblue;
+  margin: 10px;
+}
+
+What happens?
+✅ Stays in same line
+✅ Width works
+✅ Height works
+✅ Margin & padding work
+
+📌 Perfect for:
+Buttons
+Cards
+Badges
+
+
+4️⃣ display: none
+Meaning
+“Pretend this element does not exist”
+
+Example
+.hidden {
+  display: none;
+}
+
+What happens?
+❌ Not visible
+❌ Takes NO space
+❌ Removed from layout
+
+📌 Very common with JavaScript:
+element.style.display = "none";
+
+
+Flexbox is a one-dimensional layout system that arranges items along a 
+main axis and cross axis, allowing flexible spacing, alignment, and sizing.
+Flexbox works on axes, not left/right/top/bottom.
+
+❓ Why Flexbox even exists
+Before Flexbox, people used:
+float
+inline-block
+hacks 😵‍💫
+
+Problems:
+vertical centering was painful
+equal spacing was hard
+responsive layouts were messy
+
+Flexbox was created to answer one question:
+“How do I arrange items inside a container easily?”
+
+
+🧭 Axes (most confusing part — let’s kill the confusion)
+Main Axis
+default: horizontal (row)
+controlled by: flex-direction
+
+Cross Axis
+perpendicular to main axis
+default: vertical
+
+
+what is positioning?
+Positioning decides where an element sits and how it moves relative to others.
+The 5 position values
+position: static;
+position: relative;
+position: absolute;
+position: fixed;
+position: sticky;
+
+1️⃣ position: static (DEFAULT)
+Meaning
+“Just behave normally. Don’t move.”
+This is what every element is by default.
+
+Rules
+❌ top, left, right, bottom do NOTHING
+✅ Element stays in normal document flow
