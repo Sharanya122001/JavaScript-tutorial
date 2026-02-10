@@ -1,0 +1,27 @@
+Creating a DOM element always follows this pattern:
+
+🔑 The Golden 4 Steps
+Create the element
+Add content / attributes
+Select parent
+Attach (append) to DOM
+
+createElement Syntax
+document.createElement(tagName)
+
+example:
+<body>
+  <div id="container"></div>
+</body>
+
+// 1️⃣ Create element
+const para = document.createElement("p");
+
+// 2️⃣ Add content
+para.textContent = "Hello from JavaScript";
+
+// 3️⃣ Select parent
+const container = document.getElementById("container");
+
+// 4️⃣ Attach to DOM
+container.appendChild(para);

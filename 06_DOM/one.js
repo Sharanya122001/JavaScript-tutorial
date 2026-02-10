@@ -43,3 +43,8 @@ buttons.forEach(button=>
         console.log(buttons)
     })
 )
+
+let p=document.querySelectorAll(".mybutton");
+p.forEach(button=>{
+    button.textContent+=">>>"
+});
