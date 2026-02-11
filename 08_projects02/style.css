@@ -1,0 +1,52 @@
+h2{
+  color:yellowgreen;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:30px;
+}
+.weight{
+    color:aqua;
+    font-size: 40px;
+    padding:35px;
+}
+.weight label{
+    padding-right: 20px;
+}
+.weight input{
+    background-color:bisque;
+    padding:10px;
+    font-size: 20px;
+}
+
+.height{
+    color:aqua;
+    font-size: 40px;
+    padding:35px;
+}
+
+.height label{
+    padding-right:20px;
+}
+
+.height input{
+    background-color:bisque;
+    padding:10px;
+    font-size:20px;
+}
+body{
+    background-color:beige;
+}
+.guide{
+    padding-left:185px;    
+}
+
+.submit{
+    text-align: center;
+}
+.submit button{
+    color:aqua;
+    font-size:20px;
+}
+#result{
+    text-align: center;
+    font-size: 25px;
+}
