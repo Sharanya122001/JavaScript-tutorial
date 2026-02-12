@@ -24,3 +24,31 @@ Eventcapturing in the desktop/eventcapturing.docs
 Eventbubbling in the desktop/eventcapturing.docs
 Eventdelegates in the desktop/eventcapturing.docs
 Eventspillover in the desktop/eventcapturing.docs
+
+7️⃣ Why is event delegation useful?
+Answer:
+It improves performance, reduces memory usage, and handles dynamically added elements efficiently.
+
+9️⃣ What is event.currentTarget?
+Answer:
+event.currentTarget refers to the element on which the event listener is attached
+
+🔟 What is event spillover?
+Answer:
+Event spillover is an unintended triggering of parent or other element handlers due to event propagation.
+
+1️⃣2️⃣ What is the difference between stopPropagation() and preventDefault()?
+Answer:
+stopPropagation() stops the event from propagating, while preventDefault() stops the browser’s default behavior.
+
+1️⃣3️⃣ What is stopImmediatePropagation()?
+Answer:
+It prevents other listeners on the same element from executing and also stops propagation.
+
+1️⃣4️⃣ Do all events bubble?
+Answer:
+No, events like focus, blur, and mouseenter do not bubble.
+
+2️⃣1️⃣ Does onclick support capturing?
+Answer:
+No, onclick only supports bubbling.
