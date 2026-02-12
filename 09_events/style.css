@@ -1,0 +1,16 @@
+body{
+    background-color: black;
+}
+
+#one{
+    border-radius: 20px;
+    background-color: aquamarine;
+    font-size: 30px;
+}
+
+#two{
+    border-radius: 20px;
+    background-color: aquamarine;
+    font-size: 30px;
+}
+

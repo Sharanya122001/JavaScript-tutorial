@@ -1,0 +1,26 @@
+3. When you click a button… what REALLY happens?
+You click #child
+
+The browser does NOT say:
+“Only button is clicked”
+
+Instead, it does a 3-phase journey 🚦
+The 3 phases of event flow
+Capturing phase (top → down)
+Target phase (actual element)
+Bubbling phase (bottom → up)
+This is called Event Propagation
+
+
+When you click an element, the browser says:
+“Before I give the click to the button,
+let me INFORM every parent on the way down.”
+
+That informing process is called:
+🟦 Event Capturing (Trickling)
+
+
+Eventcapturing in the desktop/eventcapturing.docs
+Eventbubbling in the desktop/eventcapturing.docs
+Eventdelegates in the desktop/eventcapturing.docs
+Eventspillover in the desktop/eventcapturing.docs
