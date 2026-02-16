@@ -1,0 +1,11 @@
+.key{
+    height:100vh;
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    color:aliceblue
+}
+body{
+    background-color: black;
+}
