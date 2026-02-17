@@ -1,0 +1,1 @@
+//fetch() only rejects on network error, not on HTTP errors like 404 or 500.
