@@ -97,3 +97,5 @@ function gree(city){
 const p3={name:"krish"}
 
 gree.call(p3,"goa")
+
+//for more watch----> https://youtu.be/75W8UPQ5l7k?si=ricC0GsdABHJmMA3
